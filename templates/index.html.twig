@@ -1,0 +1,214 @@
+{% extends 'base/master.html.twig' %}
+{% set page_title = 'Home' %}
+
+{% block body %}
+    <!-- Hero block -->
+    <div style="background-image: url('{{ asset('files/banner.jpg') }}');" class="bg-center bg-cover w-full h-64">
+        <div class="bg-brand p-6 xl:py-20 xl:px-20 2xl:px-40 flex flex-wrap xl:relative top-0 left-0">
+            <div class="w-full xl:w-1/2 leading-relaxed">
+                <h1 class="text-on-brand text-3xl xl:text-5xl font-bold">Heather
+                    O'Rourke</h1>
+                <h2 class="mt-4 text-xl xl:text-2xl font-thin text-purple-800">A fan site dedicated to the late child
+                    actress, Heather O'Rourke.</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Hero block -->
+    {% if birthday == true %}
+        <!-- Birthday block -->
+        <div class="border-t border-b border-gray-200 px-4 py-4 text-center font-semibold text-gray-700 bg-white">
+            <svg class="h-5 w-5 text-purple-700 inline animate__animated animate__fadeIn" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor"
+                 class="cake w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+            </svg>
+            <span class="text-purple-800">Today is Heather's Birthday, she would have been {{ age }} years old. Happy Birthday Heather, we're thinking of you.</span>
+        </div>
+        <!-- Birthday block -->
+    {% endif %}
+    <!-- Starred in block -->
+    <div class="bg-gray-50 py-4">
+        <h5 class="text-gray-800 text-center font-semibold text-2xl my-3 tracking-tight">Heather's Notable Appearances</h5>
+        <div class="mx-auto container py-2 px-6">
+            <div class="flex flex-wrap">
+                <div class="w-full sm:w-1/2 md:w-1/3 mb-4  py-3 px-2">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12">
+                                <img src="{{ asset('files/poltergeist-min.jpg') }}" class="rounded-full h-12 w-auto"
+                                     title="Poltergeist Image"/>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <a class="text-lg leading-6 font-semibold text-purple-800 hover:opacity-75"
+                               data-tippy-content="Visit Poltergeist on IMDB"
+                               href="https://www.imdb.com/title/tt0084516/">Poltergeist</a>
+                            <p class="mt-2 text-base leading-6 text-gray-800">
+                                Heather is best known for her role as Carol Anne Freeling in the Poltergeist trilogy,
+                                she
+                                started playing the character when she was only six years old.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 mb-4 py-3 px-2">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12">
+                                <img src="{{ asset('files/webster-min.jpg') }}" class="rounded-full h-12 w-auto"
+                                     title="Webster Image"/>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <a class="text-lg leading-6 font-semibold text-purple-800 hover:opacity-75"
+                               data-tippy-content="Visit Webster on IMDB" href="https://www.imdb.com/title/tt0085109">Webster</a>
+                            <p class="mt-2 text-base leading-6 text-gray-800">
+                                Heather additionally appeared in Webster, playing the character of Melanie in three
+                                episodes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 mb-4 py-3 px-2">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12">
+                                <img src="{{ asset('files/happy-days-min.jpg') }}" class="rounded-full h-12 w-auto"
+                                     title="Happy Days Image"/>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <a class="text-lg leading-6 font-semibold text-purple-800 hover:opacity-75"
+                               data-tippy-content="Visit Happy Days on IMDB"
+                               href="https://www.imdb.com/title/tt0070992/">Happy
+                                Days</a>
+                            <p class="mt-2 text-base leading-6 text-gray-800">
+                                Heather was also a re-occurring character on Happy Days, playing the character of
+                                Heather
+                                Pfister for twelve episodes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Starred in block -->
+
+    <!-- Gallery block -->
+    <div class="bg-white px-6 py-4 w-full border-b border-t border-gray-100">
+        <div class="mx-auto container">
+            <h5 class="text-gray-800 text-center font-semibold text-2xl my-3 tracking-tight">Images of Heather</h5>
+            <div class="flex flex-wrap mb-4 w-full justify-center items-center">
+                {% for photo in gallery %}
+                    <a href="{{ path('heather_gallery') }}">
+                        <div class="rounded w-64 h-64 bg-cover bg-center transition duration-500 ease-in-out hover:scale-110 transform hover:-translate-y-1 mr-3"
+                             style="background-image: url('{{ photo.getFullFilePath() }}')"
+                             data-tippy-content="{{ photo.description }}"></div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Gallery block -->
+
+    <!-- Brief About block -->
+    <div class="bg-gray-50 px-6 py-3">
+        <div class="mx-auto container overflow-hidden">
+
+            <div class="flex flex-wrap mb-4">
+                <div class="w-full md:w-2/3 py-3 px-8">
+                    <h3 class="text-gray-800 text-center md:text-2xl font-semibold">About Heather</h3>
+
+                    <div class="whitespace-pre-line text-gray-700 text-sm md:text-base">
+                        Heather Michele O’Rourke was a child actress, born to Kathleen and Michael O’Rourke on 27th
+                        December 1975 in San Diego, California, whilst her childhood was normal for her and her older
+                        sister Tammy, her life would change when she was at the MGM Cafeteria with her mother and
+                        sister, as sister Tammy was filming ‘Pennies From Heaven’ at the time.
+
+                        Director Steven Spielberg noticed Heather and thought that she may be a good fit in a movie that
+                        he was in the stages of planning, Poltergeist. Spielberg had Heather come in for an audition and
+                        was told to scream, as Spielberg needed to make sure she could scream convincingly for the
+                        camera.
+
+                        Scream she did - Heather followed all of his instructions, however Spielberg wanted Heather to
+                        scream longer and louder, so she complied and did just that; after a while of this she
+                        eventually got tired as she was only four at the time and politely told Spielberg she would
+                        like to go home, which Spielberg understood and informed Heather’s mother, Kathleen.
+
+                        The very next day, Steven Spielberg saw the O’Rourke’s at their familiar table in the MGM
+                        Cafeteria and offered Heather the part of Carol Anne Freeling, which Heather accepted after
+                        discussing it with her mom.
+
+                        <p class="font-semibold text-center md:text-left">If you would like to read more about Heather, please click the button below to be directed to Heather's biography on her official website.</p>
+                    </div>
+
+                    <div class="rounded-md shadow my-1">
+                        <a href="https://heatherorourke.com/biography/" target="_blank"
+                           data-tippy-content="Visit the Heather O'Rourke official site"
+                           class="w-full flex items-center text-sm justify-center px-4 py-1 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-700 hover:bg-purple-600 focus:outline-none focus:border-purple-600 focus:shadow-outline-purple transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                            Read more about Heather O'Rourke
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 h-48 py-12 text-center my-2 hidden md:block">
+                    <img class="h-auto w-auto rounded-full inline" src="{{ asset('files/about.jpg') }}"
+                         title="Heather O'Rourke"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brief About block -->
+
+    <!-- FAQ block -->
+    <div class="bg-white px-6 py-4 w-full border-b border-t border-gray-100">
+        <div class="mx-auto container">
+            <h5 class="text-gray-800 text-center font-semibold text-2xl my-3 tracking-tight">Frequently Asked Questions</h5>
+            <div class="flex flex-wrap mb-4 w-full justify-center items-center">
+                <div class="container mx-auto px-2 py-2" x-data="{
+            faqs: [
+                {
+                    question: 'How old was Heather when she passed?',
+                    answer: 'Heather passed away when she was twelve years old, her birthday was December 27th and passed the following February.',
+                    isOpen: false,
+                },
+                {
+                    question: 'Does Heather have any siblings?',
+                    answer: 'Heather has a surviving sister, Tammy who is three years older than her. Heather was a twin but her mom Kathleen tragically suffered a miscarriage and lost him.',
+                    isOpen: false,
+                },
+                {
+                    question: 'What else did Heather appear in?',
+                    answer: 'Heather appeared in several television commercials and TV show movies, such as Surviving in addition to playing her best-known character in Carol Anne. (Poltergeist) For a full break down, visit the official sites filmography page.',
+                    isOpen: false,
+                },
+            ]
+        }">
+                    <div class="leading-loose text-lg mt-6">
+                        <template x-for="faq in faqs" :key="faq.question">
+                            <div>
+                                <button class="w-full font-bold border-b border-gray-400 py-3 flex justify-between items-center mt-4"
+                                        @click="faqs = faqs.map(f => ({ ...f, isOpen: f.question !== faq.question ? false : !f.isOpen}))"><!-- Specs has it that only one component can be open at a time and also you should be able to toggle the open state of the active component too -->
+                                    <div x-text="faq.question"></div>
+                                    <svg x-show="!faq.isOpen" class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+                                        <path class="heroicon-ui"
+                                              d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z" />
+                                    </svg>
+                                    <svg x-show="faq.isOpen" class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+                                        <path class="heroicon-ui"
+                                              d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z" />
+                                    </svg>
+                                </button>
+
+                                <div class="text-gray-700 text-base mt-2" x-text="faq.answer" x-show="faq.isOpen"></div>
+                            </div>
+                        </template>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ block -->
+{% endblock %}

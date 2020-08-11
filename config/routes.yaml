@@ -1,0 +1,11 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+heather_gallery:
+    path: /gallery
+    controller: App\Controller\GalleryController::index
+heather_links:
+    path: /links
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: 'links.html.twig'
