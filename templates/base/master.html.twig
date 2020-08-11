@@ -2,9 +2,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!-- Primary Meta Tags -->
+    <title>Heather O'Rourke Fan Site</title>
+    <meta name="title" content="Heather O'Rourke Fan Site">
+    <meta name="description" content="Heather O'Rourke was a child actress best known for her role in Poltergeist. This fansite is a tribute to her memory and to ensure that she will never be forgotten. ">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://heatherorourke.fans/">
+    <meta property="og:title" content="Heather O'Rourke Fan Site">
+    <meta property="og:description" content="Heather O'Rourke was a child actress best known for her role in Poltergeist. This fansite is a tribute to her memory and to ensure that she will never be forgotten. ">
+    <meta property="og:image" content="{{ asset('meta-banner.jpg') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://heatherorourke.fans">
+    <meta property="twitter:title" content="Heather O'Rourke Fan Site">
+    <meta property="twitter:description" content="Heather O'Rourke was a child actress best known for her role in Poltergeist. This fansite is a tribute to her memory and to ensure that she will never be forgotten. ">
+    <meta property="twitter:image" content="{{ asset('meta-banner.jpg') }}">
     <title>{% if page_title is defined %} {{ page_title }} | {% endif %} Heather O'Rourke</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('tailwind') }}
