@@ -7,7 +7,7 @@ module.exports = {
                 'youtube': '#FF0000',
             },
             fontFamily: {
-                sans: ['Lato'],
+                'opensans': ['Open Sans', 'sans-serif']
             },
         },
     },
