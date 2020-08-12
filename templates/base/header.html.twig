@@ -1,41 +1,87 @@
-<header class="relative z-10 px-6 py-6 sm:px-6 lg:px-8 text-gray-800 bg-white border-b border-gray-200">
-    <nav x-data="{ open: false }" @keydown.window.escape="open = false">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 font-medium text-gray-800 hover:opacity-75 text-lg transition duration-500 ease-in-out font-sans text-center lg:text-left">
-                        <a href="{{ path('index') }}" title="Heather O'Rourke Fan Site">
-                            <img class="rounded-full inline h-8 w-8 mr-1" src="{{ asset('files/logo.jpg') }}"/>
-                            <span class="font-semibold font-opensans tracking-tighter text-purple-600">Heather O'Rourke Fan Site</span>
-                        </a>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-8 flex items-baseline">
+<header>
+    <nav class="bg-white">
+        <div x-data="{ open: false }">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 border-b border-gray-50">
+                <div class="flex items-center justify-evenly">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 font-medium text-gray-800 hover:opacity-75 text-lg transition duration-500 ease-in-out font-sans text-center lg:text-left">
+                            <a href="{{ path('index') }}" title="Heather O'Rourke Fan Site">
+                                <img class="rounded-full inline h-8 w-8 mr-1" src="{{ asset('files/logo.jpg') }}"/>
+                                <span class="font-semibold font-opensans tracking-tighter text-purple-600">Heather O'Rourke Fan Site</span>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-4 flex items-center md:ml-6 text-center">
-                        <a href="{{ path('index') }}" title="View Home"
-                           class="font-medium text-purple-800 hover:opacity-75 sm:ml-12 text-base font-semibold transition duration-500 ease-in-out">
-                            <svg class="h-5 w-5 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="home w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>                            Home</a>
-                        <a href="{{ path('heather_gallery') }}" title="View Gallery"
-                           class="font-medium text-purple-800 hover:opacity-75 sm:ml-12 text-base font-semibold transition duration-500 ease-in-out">
-                            <svg class="h-5 w-5 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="photograph w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>                            Gallery</a>
-                        <a href="{{ path('heather_links') }}" title="View Links"
-                           class="font-medium text-purple-800 hover:opacity-75 sm:ml-12 text-base font-semibold transition duration-500 ease-in-out">
-                            <svg class="h-5 w-5 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="link w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                            Links</a>
+                    <div class="hidden md:block">
+                        <div class="ml-4 flex items-center md:ml-6">
+                            <a href="{{ path('index') }}" title="View Home"
+                               class="font-medium text-purple-800 hover:opacity-75 sm:ml-12 text-base font-semibold transition duration-500 ease-in-out">
+                                <svg class="h-5 w-5 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24"
+                                     stroke="currentColor" class="home w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                                Home</a>
+                            <a href="{{ path('heather_gallery') }}" title="View Gallery"
+                               class="font-medium text-purple-800 hover:opacity-75 sm:ml-12 text-base font-semibold transition duration-500 ease-in-out">
+                                <svg class="h-5 w-5 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24"
+                                     stroke="currentColor" class="photograph w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                Gallery</a>
+                            <a href="{{ path('heather_links') }}" title="View Links"
+                               class="font-medium text-purple-800 hover:opacity-75 sm:ml-12 text-base font-semibold transition duration-500 ease-in-out">
+                                <svg class="h-5 w-5 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24"
+                                     stroke="currentColor" class="link w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                                </svg>
+                                Links</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                        <button class="focus:outline-none ease-in-out" x-on:click="open = !open">
+                            <svg class="h-6 w-6 inline text-purple-600 hover:text-purple-500 cursor-pointer"
+                                 viewBox="0 0 20 20" fill="currentColor" class="menu w-6 h-6">
+                                <path fill-rule="evenodd"
+                                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div :class="{'block': open, 'hidden': !open}" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 sm:px-3">
-                <a href="#"
-                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">1</a>
-                <a href="#"
-                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">1</a>
+            <div x-show="open">
+                <div class="py-3 px-6 border-b border-gray-200 text-center">
+
+                    <a href="{{ path('index') }}" class="block w-full px-2 py-3 font-medium text-center text-lg text-purple-800 hover:opacity-75 transition duration-500 ease-in-out" title="Home">
+                        <svg class="h-6 w-6 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor" class="home w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        Home
+                    </a>
+
+                    <a href="{{ path('heather_gallery') }}" class="block w-full px-2 py-3 font-medium text-center text-lg text-purple-800 hover:opacity-75 transition duration-500 ease-in-out" title="Home">
+                        <svg class="h-6 w-6 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor" class="photograph w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        Gallery
+                    </a>
+
+                    <a href="{{ path('heather_links') }}" class="block w-full px-2 py-3 font-medium text-center text-lg text-purple-800 hover:opacity-75 transition duration-500 ease-in-out" title="Home">
+                        <svg class="h-6 w-6 inline text-purple-800 -mt-1" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor" class="link w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                        Links
+                    </a>
+
+                </div>
             </div>
         </div>
     </nav>
