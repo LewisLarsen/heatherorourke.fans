@@ -9,8 +9,10 @@
             </h4>
             <div class="border-2 border-b border-purple-500 w-32 hidden md:block mt-1"></div>
             <p class="mt-3 text-lg leading-7 text-gray-700">
-                Below are various images of Heather O'Rourke, all images are owned by their respective parties and this website
-                claim no rights to them, they are being used to highlight the unique life and equally wonderful life that Heather had.
+                Below are various images of Heather O'Rourke, all images are owned by their respective parties and this
+                website
+                claim no rights to them, they are being used to highlight the unique life and equally wonderful life
+                that Heather had.
             </p>
             <div class="py-3">
                 <div class="rounded-md border border-purple-200 bg-purple-100 px-6 py-3 text-purple-500">
@@ -29,11 +31,25 @@
     </div>
     <div class="bg-gray-50 w-full">
         <div class="mx-auto container px-10 py-2">
+            <div class="py-3">
+                <a href="{{ path('heather_gallery_download') }}">
+                    <button class="px-3 py-3 bg-purple-500 text-white rounded ease-in-out hover:opacity-75 float-right"
+                            title="Download All Gallery Photos">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="photograph w-6 h-6 inline">
+                            <path fill-rule="evenodd"
+                                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        Download All Gallery Photos
+                    </button>
+                </a>
+            </div>
             <div class="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-screen-xl lg:px-8">
                 <div class="mt-12 lg:grid lg:grid-cols-3 lg:gap-8">
                     {% for photo in gallery %}
-                        <img src="{{ photo.getFullFilePath() }}" class="w-64 h-64 bg-cover bg-center rounded-md mx-auto mb-2 lg:mb-0 object-fill"
-                             data-tippy-content="{{ photo.description }}"  alt="{{ photo.description }}"/>
+                        <img src="{{ photo.getFullFilePath() }}"
+                             class="w-64 h-64 bg-cover bg-center rounded-md mx-auto mb-2 lg:mb-0 object-fill"
+                             data-tippy-content="{{ photo.description }}" alt="{{ photo.description }}"/>
                     {% endfor %}
                 </div>
             </div>
