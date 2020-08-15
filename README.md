@@ -19,7 +19,7 @@ Need to improve the way it checks for Heather's birthday, the current code is qu
 
 ## Potential Features
 
-Maybe some kind of re-direct notice (e.g. when clicking on an external url).
+TBA
 
 ## Installation Instructions
 
