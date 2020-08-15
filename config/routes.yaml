@@ -1,14 +1,19 @@
 index:
-    path: /
-    controller: App\Controller\IndexController::index
+  path: /
+  controller: App\Controller\IndexController::index
 heather_gallery:
-    path: /gallery
-    controller: App\Controller\GalleryController::index
+  path: /gallery
+  controller: App\Controller\GalleryController::index
 heather_gallery_download:
-    path: /gallery/download
-    controller: App\Controller\GalleryController::zipDownload
+  path: /gallery/download
+  controller: App\Controller\GalleryController::zipDownload
 heather_links:
-    path: /links
-    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
-    defaults:
-        template: 'links.html.twig'
+  path: /links
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+  defaults:
+    template: 'links.html.twig'
+heather_redirect:
+  path: /redirect/{url}
+  controller: App\Controller\RedirectController::index
+  requirements:
+    url: .+
