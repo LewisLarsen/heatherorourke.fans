@@ -30,7 +30,7 @@ git clone https://github.com/LewisLarsen/heatherorourke.fans
 
 Install Composer (prod)
 ```
-composer install --no-dev --optimize-autoloader
+composer install
 ```
 
 Install NPM
