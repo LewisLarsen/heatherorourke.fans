@@ -25,7 +25,7 @@ TBA
 
 Clone the repo
 ```
-git clone https://github.com/LewisLarsen/heatherorourke.fans
+git clone git@github.com:LewisLarsen/heatherorourke.fans.git
 ```
 
 Install Composer (prod)
@@ -35,7 +35,7 @@ composer install
 
 Install NPM
 ```
-npm install --production
+npm install
 ```
 
 Build assets for good measure! (likely unnecessary but I do it nonetheless)
@@ -45,7 +45,7 @@ npm run build
 
 Make the DB
 ```
-doctrine:database:create
+php bin/console doctrine:database:create
 ```
 
 Build the DB Tables + insert Gallery data
