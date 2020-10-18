@@ -12,7 +12,7 @@
                     <div class="flex">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12">
-                                <img src="{{ asset('storage/poltergeist-min.jpg') }}" class="rounded-full h-12 w-auto"
+                                <img src="{{ asset('storage/poltergeist-min.jpg' ?? "https://heather.s3.filebase.com/assets/poltergeist-min.jpg" }}" class="rounded-full h-12 w-auto"
                                      title="Poltergeist Image"/>
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                     <div class="flex">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12">
-                                <img src="{{ asset('storage/webster-min.jpg') }}" class="rounded-full h-12 w-auto"
+                                <img src="{{ asset('storage/webster-min.jpg' ?? "https://heather.s3.filebase.com/assets/webster-min.jpg") }}" class="rounded-full h-12 w-auto"
                                      title="Webster Image"/>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                     <div class="flex">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12">
-                                <img src="{{ asset('storage/happy-days-min.jpg') }}" class="h-12 w-auto"
+                                <img src="{{ asset('storage/happy-days-min.jpg' ?? "https://heather.s3.filebase.com/assets/happy-days-min.jpg") }}" class="h-12 w-auto"
                                      title="Happy Days Image"/>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 h-48 py-12 text-center my-2 hidden md:block">
-                    <img class="h-auto w-auto rounded-full inline" src="{{ asset('storage/about-block.jpg') }}"
+                    <img class="h-auto w-auto rounded-full inline" src="{{ asset('storage/about-block.jpg' ?? 'https://heather.s3.filebase.com/assets/about-block.jpg') }}"
                          title="Heather O'Rourke"/>
                 </div>
             </div>

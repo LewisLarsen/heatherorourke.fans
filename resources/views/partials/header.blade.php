@@ -2,7 +2,7 @@
     <div class="mx-auto container px-4 pt-6 max-w-5xl">
         <div class="flex justify-around items-center max-w-xl text-center mx-auto">
             <div>
-                <img src="{{ asset('storage/logo.jpg') }}"
+                <img src="{{ asset('storage/logo.jpg' ?? 'https://heather.s3.filebase.com/assets/logo.jpg') }}"
                      class="block h-32 w-32 rounded-full border-2 border-pink-500"
                      title=" {{ config('app.name') }}">
             </div>
