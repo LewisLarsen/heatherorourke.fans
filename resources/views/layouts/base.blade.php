@@ -22,6 +22,7 @@
 
         <!-- Scripts -->
         <script src="{{ url(mix('js/app.js')) }}" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/markusantonwolf/ta-gallery@latest/dist/js/gallery.js"></script>
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">

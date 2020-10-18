@@ -71,7 +71,6 @@
         </div>
     </div>
     <!-- Starred in block -->
-
     <!-- Brief About block -->
     <div class="bg-gray-50 px-6 py-3">
         <div class="mx-auto container overflow-hidden">
@@ -117,15 +116,17 @@
                            data-tippy-content="Visit the Heather O'Rourke official site"
                            class="w-full flex items-center text-sm text-center md:text-left justify-center px-4 py-1 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-pink-600 hover:bg-pink-500 focus:outline-none focus:border-pink-500 focus:shadow-outline-pink transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                             <svg viewBox="0 0 20 20" fill="currentColor" class="external-link w-6 h-6 inline">
-                                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-                                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                                <path
+                                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                                <path
+                                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
                             </svg>
                             Read more about Heather O'Rourke
                         </a>
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 h-48 py-12 text-center my-2 hidden md:block">
-                    <img class="h-auto w-auto rounded-full inline" src="{{ asset('storage/logo.jpg') }}"
+                    <img class="h-auto w-auto rounded-full inline" src="{{ asset('storage/about-block.jpg') }}"
                          title="Heather O'Rourke"/>
                 </div>
             </div>
@@ -161,8 +162,9 @@
                     <div class="leading-loose text-lg mt-6">
                         <template x-for="faq in faqs" :key="faq.question">
                             <div>
-                                <button class="w-full font-bold border-b border-gray-400 py-3 flex justify-between items-center mt-4 focus:outline-none"
-                                        @click="faqs = faqs.map(f => ({ ...f, isOpen: f.question !== faq.question ? false : !f.isOpen}))">
+                                <button
+                                    class="w-full font-bold border-b border-gray-400 py-3 flex justify-between items-center mt-4 focus:outline-none"
+                                    @click="faqs = faqs.map(f => ({ ...f, isOpen: f.question !== faq.question ? false : !f.isOpen}))">
                                     <!-- Specs has it that only one component can be open at a time and also you should be able to toggle the open state of the active component too -->
                                     <div x-text="faq.question" class="text-gray-800 font-semibold tracking-tight"></div>
                                     <svg x-show="!faq.isOpen" class="fill-current text-gray-800 hover:opacity-75"
