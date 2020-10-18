@@ -28,9 +28,9 @@
         </svg>
     </a>
 </div>
-<link href="{{ asset('storage/carousel/dist/css/gallery.css' ?? 'https://heather.s3.filebase.com/assets/carousel/dist/css/gallery.css') }}" rel="stylesheet">
-<link href="{{ asset('storage/carousel/dist/css/gallery-keyframes-swipe.css' ?? 'https://heather.s3.filebase.com/assets/carousel/dist/css/gallery-keyframes-swipe.css') }}" rel="stylesheet">
-<script src="{{ asset('storage/carousel/dist/js/gallery.js' ?? 'https://heather.s3.filebase.com/assets/carousel/dist/js/gallery.js') }}"></script>
+<link href="https://heather.s3.filebase.com/assets/carousel/dist/css/gallery.css" rel="stylesheet">
+<link href="https://heather.s3.filebase.com/assets/carousel/dist/css/gallery-keyframes-swipe.css" rel="stylesheet">
+<script src="https://heather.s3.filebase.com/assets/carousel/dist/js/gallery.js'"></script>
 <style>
     .gallery {
         --gallery_width: 640px;
