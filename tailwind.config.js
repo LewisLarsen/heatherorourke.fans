@@ -6,6 +6,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'gray-50': '#f9fafb',
+                'youtube': '#FF0000',
+            },
         },
     },
     variants: {},
