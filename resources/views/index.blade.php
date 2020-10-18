@@ -12,7 +12,7 @@
                     <div class="flex">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12">
-                                <img src="{{ asset('storage/poltergeist-min.jpg' ?? "https://heather.s3.filebase.com/assets/poltergeist-min.jpg" }}" class="rounded-full h-12 w-auto"
+                                <img src="{{ asset('storage/poltergeist-min.jpg' ?? 'https://heather.s3.filebase.com/assets/poltergeist-min.jpg') }}" class="rounded-full h-12 w-auto"
                                      title="Poltergeist Image"/>
                             </div>
                         </div>
