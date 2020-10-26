@@ -87,6 +87,28 @@
                         <li class="mt-10">
                             <div class="flex">
                                 <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 text-white bg-pink-600 rounded-md">
+                                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                             class="external-link w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h5 class="text-lg font-medium leading-6 text-gray-800 font-semibold">Heather
+                                        O'Rourke: She Was Here</h5>
+                                    <p class="mt-2 text-base leading-6 text-gray-700">
+                                        Heather O'Rourke: She Was Here is an upcoming documentary film exploring the wonderful life of Heather. <a
+                                            href="http://www.shewasherefilm.com/" target="_blank"
+                                            class="text-pink-600 font-semibold hover:opacity-75">Visit Website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mt-10">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
                                     <div class="flex items-center justify-center w-12 h-12 text-white bg-youtube rounded-md">
                                         <svg class="w-6 h-6 text-white" stroke="none" fill="currentColor"
                                              width="24" height="24" viewBox="0 0 24 24">
