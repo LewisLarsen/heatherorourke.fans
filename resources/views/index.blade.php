@@ -5,7 +5,7 @@
 <!-- Heather's documentary film notice -->
 <div class="mx-auto container">
 <div class="py-3">
-                <div class="rounded-md border border-pink-200 bg-pink-100 px-6 py-3 text-pink-600">
+                <div class="rounded-md border border-pink-200 bg-pink-100 -mx-2 px-6 py-3 text-pink-600">
                    <svg class="w-5 h-5 inline -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                     <span>There is a historical film about Heather releasing in 2022, titled "Heather O'Rourke: She Was Here" - <a class="font-bold text-pink-500 hover:text-pink-400" href="http://www.shewasherefilm.com/" target="_blank" title="Heather O'Rourke: She Was Here">Visit Official Site</span>
                 </div>
@@ -131,7 +131,7 @@
                                 <path
                                     d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
                             </svg>
-                            Read more about Heather O'Rourke
+                            Read more about Heather
                         </a>
                     </div>
                 </div>
