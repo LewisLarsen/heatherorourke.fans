@@ -7,7 +7,7 @@
 <div class="py-3">
                 <div class="rounded-md border border-pink-200 bg-pink-100 px-6 py-3 text-pink-600">
                    <svg class="w-5 h-5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    <span>There is an historical film about Heather releasing in 2022, titled "Heather O'Rourke: She Was Here" - <a href="" target="_blank" title="Heather O'Rourke: She Was Here">Visit Official Site</span>
+                    <span>There is an historical film about Heather releasing in 2022, titled "Heather O'Rourke: She Was Here" - <a class="font-bold text-pink-500 hover:text-pink-400" href="http://www.shewasherefilm.com/" target="_blank" title="Heather O'Rourke: She Was Here">Visit Official Site</span>
                 </div>
             </div>
             </div>
