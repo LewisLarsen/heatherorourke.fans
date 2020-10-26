@@ -13,7 +13,7 @@
             </div>
 <!-- Heather's documentary film notice -->
     <!-- Starred in block -->
-    <div class="py-4">
+    <div class="py-4 text-center">
         <h5 class="text-gray-800 text-center font-opensans font-semibold text-2xl my-3 tracking-tight">Heather's Notable
             Appearances</h5>
         <div class="mx-auto container py-2 px-6">
