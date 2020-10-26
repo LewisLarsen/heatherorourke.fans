@@ -142,6 +142,11 @@
             <div class="flex flex-wrap mb-4 w-full justify-center items-center">
                 <div class="container mx-auto px-2 py-2" x-data="{
             faqs: [
+            {
+                    question: 'What is the Heather O'Rourke: She Was Here Historical Film?',
+                    answer: 'Heather O'Rourke: She Was Here is a historical film exploring the life of Heather O'Rourke with the aim to preserve her legacy. She Was Here will also include stories and never before seen images of Heather, as well as interviews with the O'Rourke family and her co-stars. The historical film is expected to release in 2022, for a link to the films official webiste, please check the Links page. ',
+                    isOpen: false,
+                },
                 {
                     question: 'How old was Heather when she passed?',
                     answer: 'Heather passed away when she was twelve years old, her birthday was December 27th and passed the following February.',
